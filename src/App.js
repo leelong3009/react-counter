@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import './App.css';
-import Counters from './components/counters';
-import NavBar from './components/navbar';
+import React, { Component } from "react";
+import "./App.css";
+import Counters from "./components/counters";
+import NavBar from "./components/navbar";
 
 class App extends Component {
   state = {
     counters: [
-      { id: 1, value: 4 },
+      { id: 1, value: 2 },
       { id: 2, value: 0 },
       { id: 3, value: 0 },
       { id: 4, value: 0 }
@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    console.log('App -');
+    console.log("App -");
   }
 
   handleDelete = counterId => {
@@ -44,7 +44,7 @@ class App extends Component {
         <NavBar
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
         />
-        <main className='container'>
+        <main className="container">
           <Counters
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
